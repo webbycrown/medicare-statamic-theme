@@ -5,8 +5,15 @@
         <div class="breadcrumbs-content">
             <h1>{{ title }}</h1>
             <div class="breadcrumbs-page">
-                <a href="{{ parent:url }}">{{ parent:title }}</a>
-                <i class="fas fa-angle-right"></i>
+                {{ if segment_2 }}
+                    <a href="/{{ segment_1 }}">
+                        {{ segment_1 | title }}
+                    </a>
+                    <i class="fas fa-angle-right"></i>
+                {{ else }}
+                    <a href="{{ parent:url }}">{{ parent:title }}</a>
+                    <i class="fas fa-angle-right"></i>
+                {{ /if }}
                 <span class="current">{{ title }}</span>
             </div>
         </div>
