@@ -1,0 +1,59 @@
+title: Service
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Featured Image'
+      -
+        display: Details
+        fields:
+          -
+            handle: image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            import: all_page_builder
+          -
+            handle: banner
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Banner
+          -
+            handle: appointment_button
+            field:
+              type: grid
+              display: 'Appointment Button'
+              fields:
+                -
+                  import: button
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

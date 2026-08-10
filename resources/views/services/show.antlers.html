@@ -1,0 +1,101 @@
+{{ all_sections where="type:breadcrumb_section" }}
+    <!-- ======= start Breadcrumb ======= -->
+    {{ partial:partials/sections/breadcrumb_section }}
+    <!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+
+<!-- ======= start Services details section ======= -->
+<section class="wc-services-section section-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="service-post-wrapper">
+                    <div class="services-content">
+                        <div class="post-image img-cover">
+                            {{ if image }}
+                            <img src="{{ image:url }}" alt="{{ image:alt}}">
+                            {{ /if }}
+                        </div>
+                        <div class="service-overview">
+                            {{ all_sections where="type:title_and_paragraphs" }}
+                            <h2>{{ heading }}</h2>
+                            {{ paragraphs }}
+                            <p>{{ paragraph }}</p>
+                            {{ /paragraphs }}
+                            {{ /all_sections }}
+
+                            {{ all_sections where="type:title_and_tags" }}
+                            <h2>{{ heading }}</h2>
+                            <ul class="service-highlights">
+                                {{ tags }}
+                                <li>{{ tag }}</li>
+                                {{ /tags }}
+                            </ul>
+                            {{ /all_sections }}
+                            {{ all_sections where="type:button" }}
+                            {{ add_button }}
+                            <a href="{{ url ?? 'javascript:;' }}"
+                                class="btn btn-primary">{{ label }}</a>
+                            {{ /add_button }}
+                            {{ /all_sections }}
+                        </div>
+                        {{ all_sections where="type:video_section" }}
+                        <div class="wc-services-video"
+                            style="background-image: url('{{ thumbnail:url }}');">
+                            <a class="popup-youtube"
+                                href="{{ video_url }}">
+                                {{ if play_button_image }}
+                                <img class="play-button"
+                                    src="{{ play_button_image:url }}"
+                                    alt="{{ play_button_image:alt }}">
+                                {{ /if }}
+                            </a>
+                        </div>
+                        {{ /all_sections }}
+                    </div>
+                    <div class="sidebar-detail">
+                        {{ all_sections where="type:image_and_title" }}
+                        <div class="wc-services">
+                            <h2>{{ main_heading }}</h2>
+                            {{ items }}
+                            <div class="infobox">
+                                <a href="{{ url }}">
+                                    {{ if image }}
+                                    <div style="margin-right:15px">
+                                        <img src="{{ image:url }}"
+                                            alt="{{ image:alt }}" height="45px"
+                                            width="45px">
+                                    </div>
+                                    {{ /if }}
+                                    <h3>{{ heading }}</h3>
+                                </a>
+                            </div>
+                            {{ /items }}
+
+                        </div>
+                        {{ /all_sections }}
+                        <div class="post-add-banner">
+                            {{ if banner }}
+                            <div class="img-cover">
+                                <img src="{{ banner:url }}"
+                                    alt="{{ banner:alt }}">
+                            </div>
+                            {{ /if }}
+
+                            {{ appointment_button }}
+                                {{ add_button }}
+                                <a href="{{ url }}" class="btn btn-primary">{{ label
+                                    }}</a>
+                                {{ /add_button }}
+                            {{ /appointment_button }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End Services details section ======= -->

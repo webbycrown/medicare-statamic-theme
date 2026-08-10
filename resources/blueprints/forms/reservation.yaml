@@ -1,0 +1,49 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              placeholder: Name
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: reason_for_appointment
+            field:
+              placeholder: 'reason for appointment'
+              type: text
+              display: 'reason for appointment'
+              validate:
+                - required
+                - email
+          -
+            handle: reservation_email
+            field:
+              type: text
+              display: 'Reservation Email'
+              placeholder: 'Reservation Email'
+              validate:
+                - required
+                - email
+          -
+            handle: date_field
+            field:
+              placeholder: DD/MM/YY
+              type: text
+              display: 'Date Field'
+              validate:
+                - required
+                - date
+          -
+            handle: treatment_type
+            field:
+              placeholder: 'Treatment Type'
+              type: text
+              display: 'Treatment Type'
+              validate:
+                - required

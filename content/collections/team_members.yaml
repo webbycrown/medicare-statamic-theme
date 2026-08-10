@@ -1,0 +1,7 @@
+title: 'Team Members'
+template: team_members/show
+route: 'doctor/{slug}'
+revisions: false
+date_behavior:
+  past: public
+  future: private

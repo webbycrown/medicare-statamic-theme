@@ -1,0 +1,169 @@
+{{ all_sections where="type:breadcrumb_section" }}
+    <!-- ======= start Breadcrumb ======= -->
+    {{ partial:partials/sections/breadcrumb_section }}
+    <!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+
+    <!-- ======= start blog details section ======= -->
+    <section class="wc-blog-detail section-all">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-post-wrapper">
+                        <div class="sidebar-details">
+                            <div class="widget posts-widget">
+                                <h2>{{ section_heading }}</h2>
+                                <ul>
+                                    {{ collection:blogs sort="date:desc|order" limit="{{display_total_posts}}" }}
+                                        <li>
+                                            <div class="entry-image"><a href="{{ url??'javascript:;' }}" class="img-cover">
+                                                    <img src="{{ image:url }}" alt="{{ image:alt }}"></a></div>
+                                            <div class="post-meta">
+                                                <p> {{ date }}</p>
+                                                <h4><a href="{{ url??'javascript:;' }}">{{ title }}</a></h4>
+                                            </div>
+                                        </li>
+                                    {{ /collection:blogs }}
+
+                                </ul>
+                            </div>
+                            <div class="widget posts-instagram">
+                                <h2>{{ social_heading }}</h2>
+                                <div class="gallery-thumbnail">
+                                    {{ items }}
+                                        <div class="gallery-item">
+                                            <a href="{{ url??'javascript:;' }}" class="img-cover"><img src="{{ image:url }}" alt="{{ image:alt }}"></a>
+                                        </div>
+                                    {{ /items }}
+                                </div>
+                            </div>
+                            <div class="widget posts-tags">
+                                <h2>{{ tag_heading }}</h2>
+                                <ul>
+                                    {{ tags }}
+                                        <li>
+                                            <a href="/blogs?tag={{ slug }}">
+                                                {{ title }}
+                                            </a>
+                                        </li>
+                                    {{ /tags }}
+                                </ul>
+                            </div>
+                            <div class="post-add-banner">
+                                {{ all_sections where="type:image" }}
+                                    <div class="img-cover">
+                                        <img src="{{ image:url }}" alt="{{ image:alt }}">
+                                    </div>
+                                {{ /all_sections }}
+                                {{ all_sections where="type:button" }}
+                                    {{ add_button }}
+                                        <a href="{{ url??'javascript:;' }}" class="btn btn-primary">{{ label }}</a>
+                                    {{ /add_button }}
+                                {{ /all_sections }}
+                            </div>
+                        </div>
+
+
+                        <div class="post-details">
+                            <!-- Featured Image -->
+                            <div class="post-image img-cover">
+                                <img src="{{ image:url }}" alt="{{ image:alt }}">
+                            </div>
+                            <!-- Post Header -->
+                            <div class="post-header">
+                                <div class="meta-left">
+                                    <div class="single-entry-author">
+                                        <div class="meta-author-info">
+                                            {{ author }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-entry-date">{{ date }}</div>
+                                <div class="meta-right"><a href="javascript:;" class="comment"><span
+                                    class="comment-count"
+                                    data-blog-id="{{ id }}">
+                                    0
+                                </span> Comments</a>
+                                </div>
+                            </div>
+                            <!-- Social Share -->
+                            {{ all_sections where="type:social_icons" }}
+                                <div class="share">
+                                    <ul class="social-icon">
+                                        {{ social_icon }}
+                                            <li><a href="{{ url ?? 'javascript:;' }}"><i class="{{ icon }}"></i></a></li>
+                                        {{ /social_icon }}
+                                    </ul>
+                                </div>
+                            {{ /all_sections }}
+                            <!-- description -->
+                            <div class="article-description">
+                                {{ content }}
+                                    {{ if type == "paragraphs" }}
+                                        {{ paragraphs }}
+                                            <p>{{ paragraph|raw }}</p>
+                                        {{ /paragraphs }}
+                                    {{ /if }}
+                                    {{ if type == "gallery" }}
+                                        <div class="wc-post-images">
+                                            {{ image }}
+                                                <div class="inner-img img-cover">
+                                                    <img src="{{ url }}" alt="{{ alt }}">
+                                                </div>
+                                            {{ /image }}
+                                        </div>
+                                    {{ /if }}
+                                    {{ if type == "tags" }}
+                                        <div class="post-listing">
+                                            <ul>
+                                                {{ tags }}
+                                                    {{ if index <= ((count + 1) / 2) }}
+                                                        <li>{{ tag }}</li>
+                                                    {{ /if }}
+                                                {{ /tags }}
+                                            </ul>
+                                            <ul>
+                                                {{ tags }}
+                                                    {{ if index > ((count + 1) / 2) }}
+                                                        <li>{{ tag }}</li>
+                                                    {{ /if }}
+                                                {{ /tags }}
+                                            </ul>
+                                        </div>
+                                    {{ /if }}
+                                {{ /content }}
+
+                                {{# comment form #}}
+                                {{ partial:partials/forms/blog_comments }}
+
+                                <div class="entry-post-navigation">
+                                    {{ collection:previous in="blogs" limit="1" }}
+                                        <div class="post-prev-link">
+                                            <a href="{{ url ?? 'javascript' }}"></a>
+                                            <div class="nav-title-wrap">
+                                                <p>{{ previous_title }}</p>
+                                                <h3><a href="{{ url }}">{{ title ?? default_previous_label }}</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    {{ /collection:previous }}
+
+                                    {{ collection:next in="blogs" limit="1" }}
+                                        <div class="post-next-link">
+                                            <a href="{{ url ?? 'javascript' }}"></a>
+                                            <div class="nav-title-wrap">
+                                                <p>{{ next_title }}</p>
+                                                <h3><a href="{{ url }}">{{ title ?? default_next_label }}</a></h3>
+                                            </div>
+                                        </div>
+                                    {{ /collection:next }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End blog details section ======= -->
+

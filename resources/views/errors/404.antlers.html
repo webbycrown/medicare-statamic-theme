@@ -1,0 +1,20 @@
+<!-- ======= start error section ======= -->
+<section class="wc-error-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="error-content">
+                    <h3>{{ error_page_settings:error_code }}</h3>
+                    <h2>{{ error_page_settings:short_message }}</h2>
+                    <p>{{ error_page_settings:descriptive_message }}</p>
+
+                    {{ error_page_settings:add_button }}
+                        <a href="{{ url }}" class="btn btn-primary">{{ label }}</a>
+                    {{ /error_page_settings:add_button }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End error section ======= -->

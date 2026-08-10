@@ -1,0 +1,45 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: initial_items_label
+            field:
+              type: text
+              display: 'Initial Items Label'
+          -
+            handle: initial_items
+            field:
+              default: '5'
+              type: text
+              display: 'Initial Items'
+              validate:
+                - numeric
+      -
+        display: 'Logo And Preloader'
+        fields:
+          -
+            handle: dark_logo
+            field: blog_section.image
+            config:
+              display: 'Dark Logo'
+          -
+            handle: light_logo
+            field: blog_section.image
+            config:
+              display: 'Light Logo'
+          -
+            handle: logo_url
+            field:
+              type: link
+              display: 'Logo Url'
+      -
+        display: Favicon
+        fields:
+          -
+            handle: favicon
+            field: blog_section.image
+            config:
+              display: Favicon

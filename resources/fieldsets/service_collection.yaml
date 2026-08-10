@@ -1,0 +1,16 @@
+title: 'Service Collection'
+fields:
+  -
+    import: title_and_sub_heading
+  -
+    handle: add_button
+    field: button.add_button
+  -
+    handle: entries_field
+    field:
+      mode: select
+      collections:
+        - services
+      type: entries
+      display: 'Entries Field'
+      max_items: 3

@@ -1,0 +1,8 @@
+title: 'Theme Settings'
+data:
+  initial_items_label: 'Load More'
+  initial_items: '5'
+  dark_logo: image/Logo.svg
+  light_logo: image/Logo-white.svg
+  logo_url: /
+  favicon: image/favicon.png

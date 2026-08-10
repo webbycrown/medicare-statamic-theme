@@ -1,0 +1,12 @@
+title: Comments
+sites:
+  - default
+propagate: true
+
+template: comments/show
+layout: layout
+
+revisions: false
+route: false
+date: false
+sort_dir: desc

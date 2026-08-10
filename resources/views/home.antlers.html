@@ -1,0 +1,295 @@
+{{ all_sections where="type:home_hero_section"}}
+<!-- ======= start hero section ======= -->
+    <section class="hero-banner-section">
+        <div class="background-overlay"></div>
+        <div class="container-fluid p-0">
+            <div class="hero-banner-body">
+                <div class="hero-banner-content">
+                    <div class="hero-left-content">
+                        <h1>{{ main_title }}</h1>
+                        <p>{{ heading }}</p>
+                        {{ add_button }}
+                            <a href="{{ url ?? 'javascript' }}" class="btn btn-primary">{{ label }}</a>
+                        {{ /add_button }}
+                        <div class="wc-rating">
+                            <ul class="icon-list">
+                                {{ loop from="1" to="{rating}" }}
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                {{ /loop }}
+
+                                <span class="elementor-icon-list-text">({{ rating }})</span>
+                            </ul>
+                            <p>{{ paragraph }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slider">
+                    <!-- Swiper -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            {{ image }}
+                                <div class="swiper-slide">
+                                    <div class="img-cover"><img src="{{ url }}" alt="{{ alt }}"></div>
+                                </div>
+                            {{ /image }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ======= End hero section ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:features_section"}}
+    <!-- ======= start features section ======= -->
+    <section class="features-section">
+        <div class="conrtainer">
+            <div class="features-content">
+                {{ items }}
+                    <div class="icon-box" data-aos="fade-left" data-aos-duration="1000">
+                        {{ add_button }}
+                            <a href="{{ url }}"></a>
+                        {{ /add_button }}
+                        <div class="iconbox-icon"><img src="{{ featured_image:url }}" alt="{{ featured_image:alt }}"></div>
+                        <div class="iconbox-detail">
+                            <h6>{{ title }}</h6>
+                        </div>
+                    </div>
+               {{ /items }}
+            </div>
+        </div>
+    </section>
+    <!-- ======= start features section ======= -->
+{{ /all_sections }}
+
+    <!-- ======= start Reservation form section ======= -->
+    <section class="reservation-form section-all">
+        <div class="container">
+            <div class="row">
+                {{ partial:partials/forms/reservation }}
+            </div>
+        </div>
+    </section>
+    <!-- ======= start Reservation form section ======= -->
+
+{{ all_sections where="type:service_collection"}}
+    <!-- ======= start Services section ======= -->
+    <section class="wc-services-section section-all overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading_secondary">
+                        <div class="heading-secondary">
+                            <h3 class="sub-title">{{ heading }}</h3>
+                            <h2>{{ sub_heading }}</h2>
+                        </div>
+                        {{ add_button }}
+                            <a href="{{ url }}" class="heading-icon"><i class="fa-solid fa-chevron-right"></i></a>
+                        {{ /add_button }}
+                    </div>
+                    <div class="wc-column-wrapper">
+                        {{ entries_field }}
+                            <!-- wc-column -->
+                            {{ partial:partials/collections/services }}
+                        {{ /entries_field }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End Services section ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:gallery" }}
+<!-- ======= start logo section ======= -->
+    <div class="wc-logo-slider">
+        <div class="slide-track">
+            {{ image }}
+            <div class="slide">
+                <img src="{{ url }}" height="100" width="250" alt="{{ alt }}" />
+            </div>
+            {{ /image }}
+        </div>
+    </div>
+<!-- ======= End logo section ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:about_section" }}
+    <!-- ======= start about section ======= -->
+    <section class="wc-about-section section-all">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="about-content">
+                        <h3 class="sub-title">{{ main_title }}</h3>
+                        <h2>{{ sub_title }}</h2>
+                        <p>{{ content }}</p>
+                        <ul>
+                            {{ features }}
+                                <li><a href="{{ url??'javascript:;' }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 42 2" style="enable-background:new 0 0 42 2;"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M41,2H1C0.4,2,0,1.6,0,1s0.4-1,1-1h40c0.6,0,1,0.4,1,1S41.6,2,41,2z">
+                                                </path>
+                                            </g>
+                                        </svg><span
+                                            class="list-text">{{ feature }}</span></a>
+                                </li>
+                            {{ /features }}
+                        </ul>
+                        {{ add_button }}
+                            <a href="{{ url??'javascript:;' }}"
+                                class="btn btn-primary">{{ label }}</a>
+                        {{ /add_button }}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="wc-about-image img-cover">
+                        {{ if featured_image }}
+                            <img src="{{ featured_image:url }}" alt="{{ featured_image:alt }}">
+
+
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End about section ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:services_listing_section" }}
+<!-- ======= start Services listing section ======= -->
+    <section class="wc-services-listing">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12">
+                    <div class="services-listing-content">
+                        <div class="listing-image img-cover">
+                            {{ if featured_image}}
+                                <img src="{{ featured_image:url }}" alt="{{ featured_image:alt }}">
+                            {{ /if}}
+                        </div>
+                        <div class="listing-content">
+                            <div class="listing-heading">
+                                <h2>{{ heading }}</h2>
+                                <p>{{ paragraph }}</p>
+                            </div>
+                            <div class="service-module">
+                                {{ items }}
+                                    <div class="care-provision">
+                                        <div class="media-block">
+                                            {{ if image }}
+                                                <img src="{{ image:url }}" alt="{{ image:alt }}">
+                                            {{ /if }}
+                                        </div>
+                                        <div class="listing-block">
+                                            <h3>{{ heading }}</h3>
+                                            <p>{{ content }}</p>
+                                        </div>
+                                    </div>
+                                {{ /items }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ======= End Services listing section ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:faq_section" }}
+    <!-- ======= start faq section ======= -->
+    <section class="wc-faq-section section-all">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="faq-content-block">
+                        <div class="faq-wrapper">
+                            <div class="heading-secondary">
+                                <h3 class="sub-title">{{ heading }}</h3>
+                                <h2>{{ sub_heading }}</h2>
+                            </div>
+                            {{ if featured_image }}
+                                <div class="img-cover">
+                                    <img src="{{ featured_image:url }}" alt="{{ featured_image:alt }}">
+                                </div>
+                            {{ /if }}
+                        </div>
+                        <div class="faq-content">
+                            <div class="accordion">
+                                {{ qa }}
+                                    <div class="accordion-item">
+                                        <button id="accordion-button-1" aria-expanded="false">
+                                            <span class="accordion-title">{{ title }}</span>
+                                            <span class="icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>{{ paragraph }}</p>
+                                        </div>
+                                    </div>
+                                {{ /qa }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- ======= start faq section ======= -->
+{{ /all_sections}}
+
+{{ all_sections where="type:testimonials_collection" }}
+    <!-- ======= start testimonial section ======= -->
+    <Section class="wc-testimonials" style="background-image: url('{{ asset:theme src="image/Video-Banner.png"}}' );">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wc-tetimonial-title">
+                        <h3 class="sub-title">{{ title }}</h3>
+                        <h2>{{ heading }}</h2>
+                    </div>
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                {{ testimonials}}
+                                    {{ partial:partials/collections/testimonial }}
+                                {{ /testimonials }}
+
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- ======= End testimonial section ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:blog_collection"}}
+    <!-- ======= start blog section ======= -->
+    <section class="wc-blog-section section-all">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wc-column-wrapper">
+                        {{ blogs }}
+                            {{ partial:partials/collections/blogs }}
+                        {{ /blogs }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End blog section ======= -->
+{{ /all_sections }}

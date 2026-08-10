@@ -1,0 +1,19 @@
+<!-- Jquery -->
+<script src="{{theme:asset src="assets/js/jquery.min.js"}}"></script>
+<!-- Jquery js -->
+<script src="{{theme:asset src="assets/js/jquery-ui.js"}}"></script>
+<!-- swiper JS -->
+<script src="{{theme:asset src="assets/js/swiper-bundle.min.js"}}"></script>
+<!-- Magnific Popup JS -->
+<script src="{{theme:asset src="assets/js/jquery.magnific-popup.min.js"}}"></script>
+<script>
+    window.currentPage = "{{ segment_1 }}";
+    window.currentBlogId = "{{ segment_2 }}";
+    window.initial_items = Number(
+    "{{ theme_settings:initial_items }}"
+);
+</script>
+
+
+<!-- Active JS -->
+<script src="{{theme:asset src="assets/js/custom.js"}}?v={{ now format=" YmdHis" }}"></script>

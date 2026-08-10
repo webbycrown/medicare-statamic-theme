@@ -1,0 +1,28 @@
+
+
+<!-- wc-column -->
+<div class="wc-column load-more-item" data-index="{{ index }}">
+    <div class="wc-content-media-group">
+        <div class="img-cover"><a href="{{ url }}">
+                <img src="{{ image:url }}" alt="{{ image:alt }}"></a>
+        </div>
+        <div class="wc-social-container">
+            <ul class="social-icons">
+                {{ all_sections where="type:social_icons" }}
+                {{ social_icon }}
+                    <li>
+                        <a href="{{ url ?? 'javascript:;' }}">
+                            <i class="{{ icon }}"></i></a>
+                    </li>
+                {{ /social_icon }}
+                {{ /all_sections }}
+            </ul>
+        </div>
+    </div>
+    <div class="wc-content-detail">
+        <h5><a href="{{ url }}">{{ title }}</a></h5>
+        {{ specialties }}
+            <p class="wc-subtitle">{{ title }}</p>
+        {{ /specialties }}
+    </div>
+</div>

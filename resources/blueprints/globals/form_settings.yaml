@@ -1,0 +1,79 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Contact Form'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: button_label
+            field:
+              type: text
+              display: 'Button label'
+      -
+        display: 'Get in touch'
+        fields:
+          -
+            handle: get_in_touch_title
+            field:
+              type: text
+              display: 'Get In Touch Title'
+          -
+            handle: heading_duplicate
+            field:
+              type: text
+              display: 'Get In Touch Heading'
+          -
+            handle: get_in_touch_button_label
+            field:
+              type: text
+              display: 'Get In Touch Button Label'
+      -
+        display: Appointment
+        fields:
+          -
+            handle: appointment_title
+            field:
+              type: text
+              display: 'Appointment Title'
+          -
+            handle: appointment_button_label
+            field:
+              type: text
+              display: 'Appointment Button Label'
+      -
+        display: 'Reservation Form'
+        fields:
+          -
+            handle: reservation_title
+            field:
+              type: text
+              display: 'Reservation Title'
+          -
+            handle: reservation_button_label
+            field:
+              type: text
+              display: 'Reservation Button Label'
+      -
+        display: Comment
+        fields:
+          -
+            handle: comment_button_label
+            field: home_hero_section.heading
+            config:
+              display: 'Comment Button Label'

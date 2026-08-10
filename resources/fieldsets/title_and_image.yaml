@@ -1,0 +1,9 @@
+title: 'Title And Image'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    import: image

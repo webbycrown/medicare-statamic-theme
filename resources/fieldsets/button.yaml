@@ -1,0 +1,19 @@
+title: Button
+fields:
+  -
+    handle: add_button
+    field:
+      max_rows: 1
+      type: grid
+      display: 'Add Button'
+      fields:
+        -
+          handle: label
+          field:
+            type: text
+            display: Label
+        -
+          handle: url
+          field:
+            type: link
+            display: Url

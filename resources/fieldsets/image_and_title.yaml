@@ -1,0 +1,31 @@
+title: 'Image And Title'
+fields:
+  -
+    handle: items
+    field:
+      type: replicator
+      display: Items
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+  -
+    handle: main_heading
+    field:
+      type: text
+      display: 'Main Heading'

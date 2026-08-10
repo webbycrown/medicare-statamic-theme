@@ -1,0 +1,49 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+
+          -
+            handle: comment_email
+            field:
+              type: text
+              display: Comment Email
+              validate:
+                - required
+                - email
+
+          -
+            handle: website
+            field:
+              type: text
+              display: Website
+
+          -
+            handle: additional_information
+            field:
+              type: textarea
+              display: Additional Information
+              validate:
+                - required
+
+          -
+            handle: parent_id
+            field:
+              type: text
+              display: Parent ID
+
+          -
+            handle: blog_id
+            field:
+              type: text
+              display: Blog ID

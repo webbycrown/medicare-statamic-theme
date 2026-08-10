@@ -1,0 +1,15 @@
+title: 'Blog Collections'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: blogs
+    field:
+      mode: select
+      collections:
+        - blogs
+      type: entries
+      display: Blogs

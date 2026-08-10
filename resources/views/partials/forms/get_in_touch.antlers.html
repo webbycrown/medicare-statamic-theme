@@ -1,0 +1,25 @@
+{{ form:get_in_touch action="{route:reachUs.submit}" method="POST" id="get-in-touch-form" attr:novalidate="novalidate" }}
+    {{ csrf }}
+
+    {{ fields }}
+        {{ if type == "textarea" }}
+            <textarea type="{{ type }}"
+                placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}" name="{{ handle }}"
+                id="{{ handle }}"></textarea>
+            <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+        {{ else }}
+            <input type="{{ type }}" class="form-control"
+                placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}" name="{{ handle }}"
+                id="{{ handle }}">
+            <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+
+        {{ /if }}
+    {{ /fields }}
+
+    <input type="submit" class="btn btn-primary" name="{{ form_settings:get_in_touch_button_label }}" value="{{ form_settings:get_in_touch_button_label }}" id="{{ form_settings:get_in_touch_button_label }}">
+
+    <div id="form-success" class="hidden bg-green-100 text-green-700 p-3 mb-4"></div>
+
+{{ /form:get_in_touch }}
+
+

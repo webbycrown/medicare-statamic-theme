@@ -1,0 +1,190 @@
+title: Blog
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              display: Date
+              validate:
+                - required
+          -
+            handle: comments
+            field:
+              type: text
+              display: Comments
+          -
+            handle: button_label
+            field:
+              type: text
+              display: 'Button Label'
+      -
+        display: Details
+        fields:
+          -
+            handle: content
+            field:
+              type: replicator
+              display: Content
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    paragraphs:
+                      display: Paragraphs
+                      fields:
+                        -
+                          handle: paragraphs
+                          field:
+                            type: replicator
+                            display: Paragraphs
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: paragraph
+                                        field:
+                                          type: textarea
+                                          display: Paragraph
+                    tags:
+                      display: Tags
+                      fields:
+                        -
+                          import: title_and_tags
+                    gallery:
+                      display: Gallery
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: Image
+          -
+            handle: author
+            field:
+              default: 'Written By XYZ'
+              type: text
+              display: Author
+          -
+            import: all_page_builder
+      -
+        display: 'Recent Post'
+        fields:
+          -
+            handle: section_heading
+            field:
+              type: text
+              display: 'Section Heading'
+          -
+            handle: display_total_posts
+            field:
+              type: text
+              display: 'Display Total Posts'
+              validate:
+                - numeric
+      -
+        display: 'Social Section'
+        fields:
+          -
+            handle: social_heading
+            field:
+              type: text
+              display: 'Social Heading'
+          -
+            handle: items
+            field:
+              type: replicator
+              display: Items
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: Image
+                        -
+                          handle: url
+                          field:
+                            type: link
+                            display: Url
+      -
+        display: Tags
+        fields:
+          -
+            handle: tag_heading
+            field:
+              type: text
+              display: 'Tag Heading'
+          -
+            import: tags_collection
+      -
+        display: 'Pagination Section'
+        fields:
+          -
+            handle: previous_title
+            field:
+              type: text
+              display: 'Previous Title'
+          -
+            handle: next_title
+            field:
+              type: text
+              display: 'Next Title'
+          -
+            handle: default_previous_label
+            field:
+              type: text
+              display: 'Default Previous Label'
+          -
+            handle: default_next_label
+            field:
+              type: text
+              display: 'Default Next Label'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

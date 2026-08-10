@@ -1,0 +1,12 @@
+title: 'Testimonials Collection'
+fields:
+  -
+    import: title_and_sub_heading
+  -
+    handle: testimonials
+    field:
+      mode: select
+      collections:
+        - testimonials
+      type: entries
+      display: Testimonials

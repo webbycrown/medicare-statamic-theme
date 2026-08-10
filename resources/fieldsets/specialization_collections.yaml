@@ -1,0 +1,15 @@
+title: 'Specialization Collections'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: specialization
+    field:
+      mode: select
+      collections:
+        - specialtzation
+      type: entries
+      display: Specialization

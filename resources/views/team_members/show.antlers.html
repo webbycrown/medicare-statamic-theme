@@ -1,0 +1,91 @@
+{{ all_sections where="type:breadcrumb_section" }}
+    <!-- ======= start Breadcrumb ======= -->
+    {{ partial:partials/sections/breadcrumb_section }}
+    <!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+
+<!-- ======= start single about ======= -->
+<section class="wc-team-section section-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wc-content-item">
+                    <div class="wc-wrapper-content">
+                        <div class="wdt-content-item">
+                            <div class="img-cover">
+                                {{ if image }}
+                                <img src="{{ image:url }}"
+                                    alt="{{ image:alt }}">
+                                {{ /if }}
+                            </div>
+                            <div class="wc-staff-content">
+                                <h5>{{ title }}</h5>
+                                <p class="wc-subtitle">{{ specialties }}</p>
+                                <div class="staff-experience">
+                                    <h3>Experience :</h3>
+                                    <p>{{experience_title}}</p>
+                                </div>
+                                <p>{{ skill_information }}</p>
+                                <h3>{{ award_title }}</h3>
+                                <div class="wc-awards">
+                                    {{ if award_images }}
+                                    {{ award_images }}
+                                    <img src="{{ url }}" alt="{{ alt }}">
+                                    {{ /award_images }}
+                                    {{ /if }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ personal_information }}
+                        <div class="wc-content-holder">
+                            <h3>{{ title }}</h3>
+                            <p>{{ information}} </p>
+                        </div>
+                        {{ /personal_information }}
+
+                        <div class="custom-progress-bar">
+                            {{ progress_bar }}
+                            <div class="progressbar-content">
+                                <div class="progress-wrapper">
+                                    <div class="title">{{ title }}</div>
+                                    <div class="value">{{ value }}%</div>
+                                </div>
+                                <div class="wc-skill-bar">
+                                    <div class="progress-bar" role="progressbar"
+                                        aria-valuenow="{{ value }}"
+                                        aria-valuemin="0" aria-valuemax="100"
+                                        style="width: {{ value }}%;">
+                                    </div>
+                                </div>
+                            </div>
+                            {{ /progress_bar }}
+                        </div>
+                    </div>
+                    <div class="wc-team-sidebar">
+                        <div class="wc-team-wrapper">
+                            <h3 class="sub-title">{{ section_title }}</h3>
+                            <h2 class="title">{{ section_heading }}</h2>
+                            <p>{{ description }}</p>
+                            {{ time_details }}
+                            <div class="wc-heading-holder">
+                                <h2>{{ day}}</h2>
+                                <div class="wc-separator"></div>
+                                <h3>{{ time }}</h3>
+                            </div>
+                            {{ /time_details }}
+                        </div>
+                        <div class="wc-contact-details">
+                            <h3 class="sub-title">{{ form_settings:get_in_touch_title }}</h3>
+                            <h2>{{ form_settings:heading_duplicate }}</h2>
+                            <div class="contact-form">
+                                {{ partial:partials/forms/get_in_touch }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End single about ======= -->

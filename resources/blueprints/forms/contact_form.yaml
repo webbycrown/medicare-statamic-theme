@@ -1,0 +1,48 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: first_name
+            field:
+              placeholder: 'First Name'
+              type: text
+              display: 'First Name'
+              validate:
+                - required
+          -
+            handle: last_name
+            field:
+              placeholder: 'Last Name'
+              type: text
+              display: 'Last Name'
+              validate:
+                - required
+          -
+            handle: mobile_number
+            field:
+              placeholder: 'Mobile Number'
+              type: text
+              display: 'Mobile Number'
+              validate:
+                - required
+          -
+            handle: email_address
+            field:
+              placeholder: 'Email Address'
+              type: text
+              display: 'Email Address'
+              validate:
+                - required
+                - email
+          -
+            handle: additional_information
+            field:
+              placeholder: 'Additional Information'
+              type: textarea
+              display: 'Additional Information'
+              validate:
+                - required
+                - 'min:3'

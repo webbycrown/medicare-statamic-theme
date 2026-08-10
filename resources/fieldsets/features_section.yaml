@@ -1,0 +1,23 @@
+title: 'Features Section'
+fields:
+  -
+    handle: add_button
+    field: button.add_button
+  -
+    handle: items
+    field:
+      type: replicator
+      display: Items
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: title
+                  field: blog_collections.title
+                -
+                  handle: featured_image
+                  field: about_section.featured_image

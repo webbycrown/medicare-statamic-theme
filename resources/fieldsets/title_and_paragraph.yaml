@@ -1,0 +1,17 @@
+title: 'Title And Paragraph'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: paragraph
+    field:
+      type: textarea
+      display: Paragraph
+  -
+    handle: link
+    field:
+      type: link
+      display: Link

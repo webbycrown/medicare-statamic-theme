@@ -1,0 +1,47 @@
+title: 'Footer Settings'
+data:
+  add_address:
+    -
+      id: mshf06a5
+      title: 'Contact Details'
+      contact_number: '+1 (800) 555-1234'
+      original_number: 18005551234
+      email: contact@healthcarecenter.com
+      address: '1250 Wellness Avenue, Medical District, New York, NY 10001, USA'
+  paragraphs:
+    -
+      id: mshfcxll
+      paragraph: 'Dedicated to exceptional healthcare through trusted specialists, modern facilities, and compassionate care for every patient.'
+      type: new_set
+      enabled: true
+  social_icon:
+    -
+      id: mshf49sd
+      title: Facebook
+      icon: 'fab fa-facebook-f'
+      url: 'https://www.facebook.com'
+    -
+      id: mshf4aqj
+      title: Twitter
+      icon: 'fab fa-twitter'
+      url: 'https://www.twitter.com'
+    -
+      id: mshf4b5o
+      title: LinkedIn
+      icon: 'fab fa-linkedin-in'
+      url: 'https://www.linkedin.com'
+    -
+      id: mshf4ch0
+      title: Youtube
+      icon: 'fab fa-youtube'
+      url: 'https://www.youtube.com'
+  heading: 'Quick links'
+  main_heading: Newsletter
+  paragraph: 'Subscribe to receive the latest health tips, medical updates, and wellness news directly in your inbox.'
+  content:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Copyright © Medicare 2026 design & developed by webby.'

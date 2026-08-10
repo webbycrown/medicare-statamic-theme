@@ -1,0 +1,98 @@
+{{ all_sections where="type:breadcrumb_section" }}
+    <!-- ======= start Breadcrumb ======= -->
+    {{ partial:partials/sections/breadcrumb_section }}
+    <!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+<!-- ======= start Services section ======= -->
+<section class="wc-services-section section-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                {{ all_sections where="type:title_and_sub_heading" }}
+                    <div class="heading-secondary">
+                        <h3 class="sub-title">{{ heading }}</h3>
+                        <h2>{{ sub_heading }}</h2>
+                    </div>
+                {{ /all_sections }}
+
+                    {{ collection:services paginate="{{ theme_settings:initial_items }}" as="services" }}
+                        <div class="wc-column-wrapper load-more-wrapper" data-collection="services" data-limit="{{ theme_settings:initial_items }}">
+                            {{ services }}
+                                {{ partial:partials/collections/services page="{paginate.current_page}" per_page="{theme_settings:initial_items}" }}
+                            {{ /services}}
+                        </div>
+                        {{ paginate }}
+                            {{ if next_page }}
+                            <div class="text-center mt-5">
+                                    <button class="btn btn-primary load-more-btn" data-next-page="{{ next_page }}">
+                                        <span class="load-more-text">
+                                            {{ theme_settings:initial_items_label }}
+                                        </span>
+                                        <span class="load-more-spinner" style="display:none;">
+                                            <i class="fa-solid fa-spinner fa-spin"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            {{ /if }}
+                        {{ /paginate }}
+
+                    {{ /collection:services }}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End Services section ======= -->
+
+<!-- ======= start Services listing section ======= -->
+<section class="wc-services-listing">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="services-listing-content">
+
+                    {{ all_sections where="type:image" }}
+                    {{ if image }}
+                    <div class="listing-image img-cover">
+                        <img src="{{ image:url }}"
+                            alt="{{ image:alt }}">
+                    </div>
+                    {{ /if }}
+                    {{ /all_sections }}
+
+                    <div class="listing-content">
+                        {{ all_sections where="type:title_and_paragraphs" }}
+                        <div class="listing-heading">
+                            <h2>{{ heading }}</h2>
+                            {{ paragraphs }}
+                            <p>{{ paragraph }}</p>
+                            {{ /paragraphs }}
+                        </div>
+                        {{ /all_sections }}
+
+                        <div class="service-module">
+                            {{ all_sections where="type:title_description_and_image" }}
+                            {{ items }}
+                            <div class="care-provision">
+                                <div class="media-block" style="padding: 20px;">
+                                    {{ if image }}
+                                    <img src="{{ image:url }}"
+                                        alt="{{ image:alt }}">
+                                    {{ /if }}
+                                </div>
+                                <div class="listing-block">
+                                    <h3>{{ heading }}</h3>
+                                    <p>{{ content }}</p>
+                                </div>
+                            </div>
+                            {{ /items }}
+                            {{ /all_sections }}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End Services listing section ======= -->

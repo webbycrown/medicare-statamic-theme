@@ -1,0 +1,33 @@
+title: Timing
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: time_details
+    field:
+      type: grid
+      display: 'Time Details'
+      fields:
+        -
+          handle: day
+          field:
+            type: text
+            display: Day
+        -
+          handle: time
+          field:
+            type: text
+            display: Time

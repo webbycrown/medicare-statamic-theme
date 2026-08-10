@@ -1,0 +1,7 @@
+title: 'Google Map Embed URL'
+fields:
+  -
+    handle: map_embed_url
+    field:
+      type: link
+      display: 'Map Embed URL'

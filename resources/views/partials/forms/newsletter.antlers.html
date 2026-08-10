@@ -1,0 +1,18 @@
+{{ form:newsletter method="POST" action="{{ route:newsletter.submit }}" id="newsletter-form" attr:novalidate="novalidate"}}
+
+    {{ fields }}
+        {{ if type == "text"}}
+            <div class="form-fields">
+                <input type="email" id="{{ handle }}" name="{{ handle }}" placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}" >
+                <div class="form-button">
+                    <button type="submit">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+        {{ /if }}
+        <div id="news-form-success" class="hidden bg-green-100 text-green-700 p-3 mb-4"></div>
+    {{ /fields }}
+    
+{{ /form:newsletter }}

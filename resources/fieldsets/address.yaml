@@ -1,0 +1,33 @@
+title: Address
+fields:
+  -
+    handle: add_address
+    field:
+      type: grid
+      display: 'Add Address'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: contact_number
+          field:
+            type: text
+            display: 'Contact No.'
+        -
+          handle: original_number
+          field:
+            type: integer
+            display: 'Original Number'
+        -
+          handle: email
+          field:
+            type: text
+            display: Email
+        -
+          handle: address
+          field:
+            type: textarea
+            display: Address

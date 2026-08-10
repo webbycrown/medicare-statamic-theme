@@ -1,0 +1,43 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Contact Details'
+        fields:
+          -
+            import: address
+      -
+        display: 'Social Icons'
+        fields:
+          -
+            handle: paragraphs
+            field: title_and_paragraphs.paragraphs
+          -
+            import: social_icons
+      -
+        display: 'Link Title'
+        fields:
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+      -
+        display: 'News Letter'
+        fields:
+          -
+            handle: main_heading
+            field: image_and_title.main_heading
+          -
+            handle: paragraph
+            field: title_and_paragraph.paragraph
+      -
+        display: CopyRight
+        fields:
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content

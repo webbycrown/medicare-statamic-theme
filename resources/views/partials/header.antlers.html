@@ -1,0 +1,91 @@
+<!-- ======= start header section ======= -->
+<header class="site-header">
+    <div class="overflow"></div>
+    <!-- Top-bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="column top-left d-none d-lg-block">
+                    <div class="header-message">
+                        {{ header_settings:header_messages }}
+                            {{ if add_button }}
+                                {{ add_button }}
+                                    <p><a href="{{ url }}" class="mail-link">{{ label }}</a></p>
+                                {{ /add_button }}
+                            {{ /if }}
+                            {{ if message }}
+                                <p>No: 99 A, East Florida Street, Alabama, USA 3661</p>
+                            {{ /if }}
+                        {{ /header_settings:header_messages }}
+                    </div>
+                </div>
+                <div class="column top-right d-none d-lg-block">
+                    {{ if header_settings:social_icon }}
+                        <ul class="social-icon">
+                            {{ {{ header_settings:social_icon }} }}
+                                <li><a href="{{ url ?? 'javascript:;' }}"><i class="{{ icon }}"></i></a></li>
+                            {{ /{{ header_settings:social_icon }} }}
+                        </ul>
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top-bar -->
+
+    <!-- Header-navbar -->
+    <div class="header-row header-navbar">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="column left">
+                    <div class="site-brand">
+                        <a href="{{ theme_settings:logo_url }}"><img src="{{ theme_settings:dark_logo:url  }}" alt="{{ theme_settings:dark_logo:alt }}"></a>
+                    </div>
+                </div>
+                <div class="column center">
+                    <nav class="site-nav horizontal primary-nav">
+                        <ul class="menu ">
+                                {{ nav:header_menu }}
+                                    <li class="menu-item {{ if is_current || is_parent }}active{{ /if }}"><a href="{{ url }}">{{ title }}</a></li>
+                                {{ /nav:header_menu }}
+                            </ul>
+                        </nav>
+                    </div>
+                <div class="column right">
+                    {{ if header_settings:add_button }}
+                    {{ header_settings:add_button }}
+                        <div class="header-button">
+                            <a href="{{ url ?? 'javascript' }}" class="btn btn-primary">{{ label }}</a>
+                        </div>
+                    {{ /header_settings:add_button }}
+                    {{ /if }}
+                    <div class="header-button d-block d-lg-none">
+                        <a href="javascript:;" class="toggle-menu"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header-navbar -->
+
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+        <div class="d-flex align-items-center py-2 px-3">
+            <div class="site-brand">
+                <a href="{{ theme_settings:logo_url }}"><img src="{{ theme_settings:dark_logo:url }}" alt="{{ theme_settings:dark_logo:alt }}"></a>
+            </div>
+            <div class="mobile-menu-close"><a href="javascript:;"><i class="fa fa-xmark"></i></a></div>
+        </div>
+        <!-- site-nav -->
+        <div class="mobile-menu-wrap">
+            <nav class="site-nav horizontal primary-nav">
+                <ul class="menu ">
+                    {{ nav:header_menu }}
+                            <li class="menu-item {{ if is_current || is_parent }}active{{ /if }}"><a href="{{ url }}">{{ title }}</a></li>
+                    {{ /nav:header_menu }}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- ======= end header section ======= -->

@@ -1,0 +1,24 @@
+title: 'Title And Paragraphs'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: paragraphs
+    field:
+      type: replicator
+      display: Paragraphs
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: paragraph
+                  field:
+                    type: textarea
+                    display: Paragraph

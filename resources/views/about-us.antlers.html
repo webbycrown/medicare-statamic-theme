@@ -1,0 +1,142 @@
+{{ all_sections where="type:breadcrumb_section" }}
+    <!-- ======= start Breadcrumb ======= -->
+    {{ partial:partials/sections/breadcrumb_section }}
+    <!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+
+{{ all_sections where="type:about_section" }}
+    <!-- ======= start about section ======= -->
+    <section class="wc-about-section section-all">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="about-content">
+                        <h3 class="sub-title">{{ main_title }}</h3>
+                        <h2>{{ sub_title }}</h2>
+                        <p>{{ content }}</p>
+                        <ul>
+                            {{ features }}
+                                <li><a href="{{ url??'javascript:;' }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 42 2" style="enable-background:new 0 0 42 2;"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M41,2H1C0.4,2,0,1.6,0,1s0.4-1,1-1h40c0.6,0,1,0.4,1,1S41.6,2,41,2z">
+                                                </path>
+                                            </g>
+                                        </svg><span
+                                            class="list-text">{{ feature }}</span></a>
+                                </li>
+                            {{ /features }}
+                        </ul>
+                        {{ add_button }}
+                            <a href="{{ url??'javascript:;' }}"
+                                class="btn btn-primary">{{ label }}</a>
+                        {{ /add_button }}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="wc-about-image img-cover">
+                        {{ if featured_image }}
+                            <img src="{{ featured_image:url }}" alt="{{ featured_image:alt }}">
+
+
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End about section ======= -->
+{{ /all_sections }}
+
+<!-- ======= start video section ======= -->
+{{ all_sections where="type:video_section" }}
+
+    <section class="wc-video-section"
+        style="background-image: url('{{ thumbnail:url }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content__item">
+                        <div class="video__econtent">
+                            <h3 class="sub-title">{{ main_title }}</h3>
+                            <h2>{{ heading }}</h2>
+                            <p>{{ content }}</p>
+                        </div>
+                        <div class="video-play-border">
+                            <p class="trigger-label">{{ video_title }}</p>
+                            <a class="popup-youtube" href="{{ video_url }}">
+
+                                <img class="play-button-border" src="{{ play_button_border:url }}"
+                                    alt="{{ play_button_border:alt }}">
+                                <img class="play-button" src="{{ play_button_image:url }}"
+                                    alt="{{ play_button_image:alt }}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ /all_sections }}
+<!-- ======= start video section ======= -->
+
+<!-- ======= start team section ======= -->
+{{ all_sections where="type:team_members_collection" }}
+    <section class="wc-team-section section-all">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wc-team-holder">
+                        <h3 class="sub-title">{{ title }}</h3>
+                        <h2>{{ specialists }}</h2>
+                    </div>
+                    <div class="wc-column-wrapper">
+                        {{ doctors }}
+                            {{ partial:partials/collections/team_members }}
+                        {{ /doctors }}
+
+                    </div>
+                    <div class="Sub-button">
+                        {{ add_button }}
+                            <a href="{{ url??'javascript:;' }}"
+                                class="btn btn-primary">{{ label }}</a>
+                        {{ /add_button }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ /all_sections }}
+<!-- ======= start team section ======= -->
+
+<!-- ======= start testimonial section ======= -->
+{{ all_sections where="type:title_and_sub_heading" }}
+    <section class="wc-testimonials"
+        style="background-image: url('{{ theme:asset src="assets/image/Video-Banner.png" }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wc-tetimonial-title">
+                        <h3 class="sub-title">{{ title }}</h3>
+                        <h2>{{ sub_heading }}</h2>
+                    </div>
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                {{ collection:testimonials }}
+                                    {{ partial:partials/collections/testimonial }}
+                                {{ /collection:testimonials }}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ /all_sections }}
+<!-- ======= End testimonial section ======= -->

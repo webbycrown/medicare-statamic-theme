@@ -1,0 +1,38 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: header_messages
+            field:
+              type: replicator
+              display: 'Header Messages'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: message
+                          field:
+                            type: text
+                            display: Message
+                    link:
+                      display: Link
+                      fields:
+                        -
+                          import: button
+      -
+        display: 'Social Icons'
+        fields:
+          -
+            import: social_icons
+      -
+        display: Button
+        fields:
+          -
+            import: button

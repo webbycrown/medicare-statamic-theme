@@ -1,0 +1,1092 @@
+@charset "utf-8";
+/* =====================================
+Template Name: Hospital html
+Author Name: Webby Crown
+Author URI: 
+Description: Medicare Site - HTML5 Template.
+Version:1.0
+========================================*/
+
+@media screen and (max-width: 1540px) {
+    .hero-banner-section .background-overlay {
+        opacity: 0;
+    }
+
+    .hero-banner-section .hero-left-content {
+        padding-right: 50px;
+        padding-left: 15px;
+    }
+
+    .contact-form #form-success {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .section-all {
+        padding: 80px 0;
+    }
+
+    .container {
+        max-width: 1520px;
+    }
+
+    .hero-banner-section {
+        padding: 180px 0 60px;
+        min-height: inherit;
+    }
+
+    .hero-banner-section .background-overlay {
+        opacity: 0;
+    }
+
+    .hero-banner-section .hero-left-content h1 {
+        font-size: 45px;
+    }
+
+    .wc-testimonials {
+        padding: 90px 0;
+    }
+
+    .wc-testimonials .wc-tetimonial-title {
+        margin-bottom: 60px;
+    }
+
+    .services-listing-content .listing-content {
+        padding: 70px 0 70px 50px;
+    }
+
+    .services-listing-content .listing-heading {
+        padding-right: 30px;
+    }
+
+    .services-listing-content .listing-content h2 {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .services-listing-content .listing-content>p {
+        margin-bottom: 40px;
+    }
+
+    .wc-services-listing .care-provision {
+        gap: 20px;
+        padding: 10px 30px 10px 10px;
+    }
+
+    .wc-services-listing .care-provision .media-block {
+        width: 70px;
+        height: 70px;
+    }
+
+    .wc-services-listing .care-provision .media-block svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .wc-appointment-section {
+        margin: 0 20px;
+    }
+
+    .wc-appointment-section .appointment-wrapper {
+        padding: 30px;
+    }
+
+    .wc-awards-section .awards-content {
+        padding: 30px;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-item {
+        padding: 30px;
+    }
+
+    .wc-awards-section .awards-images h2 {
+        font-size: 40px;
+        line-height: 45px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .heading-secondary {
+        padding-bottom: 40px;
+    }
+
+    .site-header .site-nav.primary-nav .menu>.menu-item>a {
+        padding: 8px 14px;
+    }
+
+    .services-listing-content .listing-content {
+        padding: 40px 0 40px 30px;
+    }
+
+    .services-listing-content .listing-heading p {
+        margin-bottom: 30px;
+    }
+
+    .wc-blog-section .wc-column p {
+        margin: 14px 0;
+        font-size: 14px;
+    }
+
+    .wc-blog-section .wc-column h4 {
+        font-size: 20px;
+    }
+
+    .wc-blog-section .wc-column .entry-meta-comment {
+        font-size: 12px;
+    }
+
+    .wc-blog-detail .wc-post-images .inner-img {
+        margin: 5px;
+    }
+
+    .wc-services-section .sidebar-detail {
+        padding: 20px;
+    }
+
+    .wc-services-section .sidebar-detail .infobox h3 {
+        font-size: 18px;
+    }
+
+    .wc-services-section .sidebar-detail h2 {
+        margin-bottom: 14px;
+        font-size: 20px;
+    }
+
+    .reservation-title h2 {
+        max-width: 100%;
+    }
+
+    .reservation-title {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .awards-content .heading-secondary {
+        text-align: center;
+    }
+
+    .wc-video-section {
+        padding: 90px 0;
+    }
+
+    .contact-form #form-success {
+        margin-block: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-banner-section .hero-left-content h1 {
+        font-size: 40px;
+    }
+
+    .about-content ul li {
+        margin-bottom: 24px;
+    }
+
+    .wc-team-section .wc-column-wrapper .wc-column {
+        width: 33.33%;
+    }
+
+    .wc-team-section .wc-wrapper-content {
+        width: 60%;
+        margin-right: 40px;
+    }
+
+    .wc-team-section .wc-team-sidebar {
+        width: 40%;
+        padding: 20px;
+    }
+
+    .wc-team-section .wc-staff-content h5 {
+        font-size: 24px;
+    }
+
+    .wc-team-section .wdt-content-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .wc-team-section .staff-experience,
+    .wc-team-section .wc-staff-content p.wc-subtitle {
+        margin-bottom: 20px;
+    }
+
+    .wc-heading-holder h2,
+    .wc-heading-holder h3 {
+        font-size: 14px;
+    }
+
+    .testimonial-slider .testimonial-content {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .wc-services-section .wc-services-detail h2 {
+        font-size: 55px;
+        line-height: 60px;
+    }
+
+    .sidebar-details .posts-instagram .gallery-thumbnail {
+        grid-gap: 10px;
+    }
+
+    .wc-services-section .sidebar-detail .infobox svg {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .contact-wrapper .contact-section__wrapper {
+        padding-right: 40px;
+    }
+
+    .contact-form #form-success {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    h2 {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .sub-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .site-header.sticky {
+        top: 0;
+    }
+
+    .site-header .header-navbar {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .site-header .header-navbar .site-nav {
+        display: none;
+    }
+
+    .site-header .topbar {
+        border-bottom: 0;
+        padding: 0;
+    }
+
+    .header-navbar .header-button .toggle-menu {
+        margin-left: 12px;
+    }
+
+    .header-navbar .header-button .toggle-menu i {
+        font-size: 22px;
+        color: #000;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        right: -150%;
+        top: 0;
+        max-width: 100%;
+        background: #fcf7ee;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9999;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu.open {
+        right: 0;
+    }
+
+    .mobile-menu-close {
+        margin: 0 -10px 0 auto;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-menu-close a {
+        width: 100%;
+        height: 100%;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: center;
+        color: var(--color-black);
+    }
+
+    .mobile-menu .site-brand {
+        max-width: 110px;
+    }
+
+    .site-header .mobile-menu .menu {
+        height: 100%;
+        overflow-y: auto;
+        display: block;
+    }
+
+    .site-header .mobile-menu .menu>li {
+        position: relative;
+        border-bottom: 1px solid rgb(0 0 0 / 6%);
+    }
+
+    .site-header .mobile-menu .menu li .caret-arrow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 48px;
+        height: 48px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .site-header .mobile-menu .menu li .caret-arrow:before {
+        font-family: 'FontAwesome';
+        font-size: 12px;
+        content: "\f078";
+    }
+
+    .site-header .mobile-menu .menu li .caret-arrow.active:before {
+        transform: rotate(182deg);
+    }
+
+    .site-header .site-nav.primary-nav .menu>.menu-item>a {
+        padding: 15px 18px;
+        display: block;
+        height: auto;
+        margin: 0;
+    }
+
+    .site-nav.horizontal>.menu>.menu-item-has-children>a::after {
+        display: none;
+    }
+
+    .site-header .mobile-menu .menu li ul {
+        padding: 8px;
+        border-top: 1px solid #fcf7ee;
+    }
+
+    .site-header .mobile-menu .menu li>.sub-menu {
+        display: none;
+    }
+
+    .site-header .mobile-menu .menu li ul li a {
+        padding: 6px 25px;
+        display: block;
+        font-size: 14px;
+        color: #000000;
+        font-family: "Montserrat", Sans-serif;
+    }
+
+    .mobile-menu-wrap {
+        height: calc(100vh - 56px);
+        overflow-y: auto;
+    }
+
+    .header-navbar .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    .header-navbar .header-wrapper {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .header-button .btn {
+        padding: 10px 20px;
+    }
+
+    .header-navbar .left .site-brand img {
+        max-width: 120px;
+    }
+
+    .hero-banner-section {
+        padding: 100px 0 30px;
+    }
+
+    .hero-banner-section .hero-banner-body {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .hero-banner-section .swiper {
+        border-radius: 10px;
+    }
+
+    .hero-banner-section .hero-banner-content,
+    .hero-banner-section .hero-slider {
+        width: 100%;
+    }
+
+    .hero-banner-section .hero-left-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .hero-banner-section .hero-left-content p {
+        margin: 20px 0;
+    }
+
+    .features-section .features-content {
+        row-gap: 2px;
+    }
+
+    .features-section .features-content .icon-box {
+        width: 50%;
+        padding: 20px;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .features-section .iconbox-icon img {
+        max-width: 40px;
+    }
+
+    footer .footer-parent {
+        padding: 50px 0;
+    }
+
+    footer .footer-content p {
+        margin: 20px 0;
+    }
+
+    .contact-info .form-fields {
+        margin-top: 20px;
+    }
+
+    .about-content ul li a {
+        font-size: 16px;
+    }
+
+    .wc-testimonials {
+        padding: 70px 0;
+    }
+
+    .testimonial-content .img-cover {
+        margin-right: 20px;
+    }
+
+    .testimonial-content .wc-content-detail-group {
+        padding-left: 20px;
+    }
+
+    .wc-services-section .wc-services-detail h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .wc-services-listing .care-provision .listing-block h3 {
+        font-size: 18px;
+    }
+
+    .wc-blog-section .wc-column .entry-thumb::before {
+        padding-top: 80%;
+    }
+
+    .blog-post-wrapper .sidebar-details {
+        padding: 30px 15px;
+    }
+
+    .sidebar-details .widget {
+        margin-bottom: 30px;
+    }
+
+    .post-add-banner .btn {
+        padding: 12px 15px;
+    }
+
+    .wc-services-section .services-content {
+        margin-right: 20px;
+    }
+
+    .wc-services-video a.popup-youtube {
+        height: 70px;
+        width: 70px;
+    }
+
+    .wc-services-video a.popup-youtube img {
+        max-width: 20px;
+    }
+
+    .contact-wrapper .contact-info ul li {
+        margin-bottom: 20px;
+    }
+
+    .wc-contact-section .appointment-title h2 {
+        margin-bottom: 10px;
+        line-height: 25px;
+        font-size: 20px;
+    }
+
+    .wc-appointment-section .appointment-area {
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+
+    .wc-appointment-section .appointment-area .time-picker {
+        margin-top: 30px;
+    }
+
+    .wc-appointment-section .schedule-btn {
+        margin-top: 25px;
+    }
+
+    .wc-appointment-section .appointment-wrapper {
+        padding: 30px 10px;
+    }
+
+    .wc-appointment-section .appointment-area h2 {
+        margin-bottom: 20px;
+    }
+
+    .wc-faq-section .faq-wrapper {
+        padding-right: 0;
+    }
+
+    .wc-faq-section .faq-content {
+        padding-left: 20px;
+    }
+
+    .wc-logo-slider .slide {
+        width: 200px;
+    }
+
+    .wc-logo-slider .slide-track img {
+        max-width: 120px;
+    }
+
+    .wc-awards-section .awards-images {
+        padding: 100px 0;
+    }
+
+    .wc-awards-section .awards-images h2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu .menu-item {
+        position: relative;
+    }
+
+    .menu-item>.sub-menu {
+        position: absolute;
+        min-width: 200px;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        -webkit-transition: all 0.2s cubic-bezier(.28, .12, .22, 1);
+        transition: all 0.2s cubic-bezier(.28, .12, .22, 1);
+        border-radius: 0;
+        box-shadow: 0 0 2px 3px rgb(0 0 0 / 5%);
+        border-top: 3px solid #b6713e;
+    }
+
+    .menu-item:hover>.sub-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .menu-item>.sub-menu>li>a {
+        color: var(--color-black);
+        font-size: 16px;
+        line-height: 28px;
+        font-family: 'Bricolage Grotesque';
+        padding: 8px 15px;
+        display: block;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .menu-item:hover>.sub-menu>li>a:hover {
+        color: var(--color-primary);
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    p {
+        font-size: 14px;
+    }
+
+    .section-all {
+        padding: 60px 0;
+    }
+
+    .hero-banner-section .hero-left-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-banner-section .wc-rating {
+        margin-top: 30px;
+    }
+
+    .features-section .iconbox-detail h6 {
+        font-size: 14px;
+    }
+
+    footer .footer-content,
+    footer .footer-links,
+    footer .contact-details {
+        margin-bottom: 40px;
+    }
+
+    .wc-breadcrumbs {
+        padding: 100px 0 60px;
+    }
+
+    .wc-breadcrumbs .breadcrumbs-content h1 {
+        margin-bottom: 14px;
+        font-size: 30px;
+    }
+
+    .wc-breadcrumbs .breadcrumbs-page a,
+    .wc-breadcrumbs .breadcrumbs-page span {
+        font-size: 14px;
+    }
+
+    .about-content {
+        margin-bottom: 30px;
+    }
+
+    .wc-team-section .wc-content-item {
+        flex-direction: column;
+    }
+
+    .wc-team-section .wc-wrapper-content {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .wc-team-section .wc-team-sidebar {
+        width: 100%;
+    }
+
+    .wc-testimonials .wc-tetimonial-title {
+        margin-bottom: 40px;
+    }
+
+    .testimonial-slider .testimonial-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-content .wc-content-detail-group {
+        padding-left: 0;
+        border-left: 0;
+        text-align: center;
+    }
+
+    .testimonial-content .img-cover {
+        margin-right: 0;
+        width: 25%;
+    }
+
+    .testimonial-content .wc-content-detail-group h5 {
+        font-size: 14px;
+    }
+
+    .wc-team-section .wc-column-wrapper .wc-column,
+    .wc-services-section .wc-column-wrapper .wc-column,
+    .wc-blog-section .wc-column-wrapper .wc-column {
+        width: 50%;
+    }
+
+    .services-listing-content {
+        flex-direction: column;
+    }
+
+    .services-listing-content .listing-image,
+    .services-listing-content .listing-content {
+        width: 100%;
+    }
+
+    .services-listing-content .listing-image::before {
+        padding-top: 50%;
+    }
+
+    .services-listing-content .listing-content {
+        padding: 30px 0 30px 20px;
+    }
+
+    .blog-post-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .blog-post-wrapper .post-details,
+    .blog-post-wrapper .sidebar-details {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .wc-blog-detail .wc-post-images .inner-img {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .sidebar-details .posts-widget .post-meta h4 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .sidebar-details .widget h2 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .wc-services-section .service-post-wrapper {
+        flex-direction: column;
+    }
+
+    .wc-services-section .services-content,
+    .wc-services-section .sidebar-detail {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-wrapper .contact-section__wrapper {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .contact-wrapper .contact-section__content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .wc-contact-section .appointment-content {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .contact-wrapper .contact-area {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .wc-appointment-section .appointment-area .time-picker {
+        margin-top: 0;
+    }
+
+    /* .wc-appointment-section .appointment-area .form-input select,
+    .wc-appointment-section .appointment-area .time-picker input.datepicker {
+        margin-bottom: 20px;
+    } */
+
+    .wc-appointment-section .appointment-wrapper .appointment-schedule {
+        padding: 15px;
+    }
+
+    .wc-faq-section .faq-content-block {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .wc-faq-section .faq-wrapper,
+    .wc-faq-section .faq-content {
+        width: 100%;
+    }
+
+    .wc-faq-section .faq-content {
+        padding-left: 0;
+    }
+
+    .wc-faq-section .faq-wrapper .img-cover {
+        border: 10px solid #f5ecd9;
+    }
+
+    .award-box-holder .wdt-content-image {
+        max-width: 140px;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-group h5 {
+        font-size: 18px;
+    }
+
+    .wc-video-section .content__item {
+        flex-direction: column;
+    }
+
+    .wc-video-section .video__econtent {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .wc-video-section .video__econtent h2 {
+        max-width: 100%;
+    }
+
+    .post-listing {
+        gap: 0;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    #comment-form .form-column {
+        grid-template-columns: 1fr;
+    }
+
+    #comment-form .form-column .form-input {
+        grid-column: 1 !important;
+    }
+
+
+    .reservation-form .form-column .form-input,
+    .reservation-form .form-column .form-input {
+        grid-column: 1;
+    }
+
+    .reservation-form .form-column,
+    .reservation-form .time-picker.form-column {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .reservation-form .appointment-area .form-input input {
+        padding: 10px;
+    }
+
+    .reservation-form.section-all .row .col-12 {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .preloader-inner h2 {
+        font-size: 50px;
+    }
+
+    .header-navbar .left .site-brand img {
+        max-width: 100px;
+    }
+
+    .hero-banner-section .hero-left-content h1 {
+        font-size: 30px;
+    }
+
+    .features-section .features-content .icon-box {
+        width: 100%;
+        border-right: 0;
+    }
+
+    .wc-breadcrumbs .breadcrumbs-content h1 {
+        font-size: 25px;
+    }
+
+    .wc-heading-holder h2,
+    .wc-heading-holder h3 {
+        font-size: 12px;
+    }
+
+    .wc-team-sidebar .wc-team-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .wc-services-section .wc-services-detail h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .wc-services-section .wc-services-detail h5 a {
+        font-size: 14px;
+    }
+
+    .wc-services-listing .care-provision {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 0;
+    }
+
+    .wc-blog-section .wc-column-wrapper .wc-column {
+        width: 100%;
+        padding: 0;
+    }
+
+    .post-listing {
+        flex-direction: column;
+    }
+
+    .wc-blog-detail .entry-post-navigation>div {
+        padding: 20px;
+    }
+
+    .wc-blog-detail .entry-post-navigation .nav-title-wrap h3 {
+        font-size: 16px;
+    }
+
+    .wc-blog-detail .entry-post-navigation {
+        margin-top: 30px;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .wc-blog-detail .entry-post-navigation .post-next-link {
+        border-top: 1px solid #b7b7b7;
+        border-left: 0;
+    }
+
+    .wc-services-section .sidebar-detail .infobox h3 {
+        font-size: 16px;
+    }
+
+    .wc-services-section .sidebar-detail .wc-services {
+        margin-bottom: 30px;
+    }
+
+    .wc-services-section ul.service-highlights {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10px;
+    }
+
+    .wc-services-section .service-overview h2,
+    .wc-services-section .service-overview p {
+        margin-bottom: 15px;
+    }
+
+    .contact-wrapper .contact-area .contact-info {
+        width: 100%;
+    }
+
+    .wc-contact-section .appointment-content .wc-content-item {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .wc-contact-section .appointment-content {
+        padding: 20px;
+    }
+
+    .form-column {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .reservation-form form.form-wrap .form-input:nth-child(1) {
+        width: 100%;
+    }
+
+    .reservation-form form.form-wrap {
+        margin-bottom: 0;
+    }
+
+    .accordion button {
+        padding: 15px 30px 15px 0;
+        font-size: 16px;
+    }
+
+    .services-listing-content .listing-content {
+        padding: 20px;
+    }
+
+    .services-listing-content .listing-heading {
+        padding-right: 0;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-item .wdt-content-media-group {
+        flex: 100%;
+        margin-bottom: 15px;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-item {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-item .wdt-content-detail-group {
+        flex-direction: column;
+        text-align: center;
+        flex: 100%;
+        width: 100%;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-item .wdt-content-group {
+        padding-left: 0;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-subtitle {
+        flex: 100%;
+        margin-bottom: 10px;
+    }
+
+    .award-box-holder .wdt-column .wdt-content-subtitle:before,
+    .award-box-holder .wdt-column .wdt-content-subtitle::after {
+        background: none;
+    }
+
+    .contact-form #form-success {
+        font-size: 12px;
+        padding: 10px;
+        margin-block: 10px;
+    }
+
+    .wc-appointment-section .appointment-area .form-input select,
+    .wc-appointment-section .appointment-area .time-picker input.datepicker,
+    .reservation-form .appointment-area .form-input select,
+    .reservation-form .appointment-area .form-input input {
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .wc-team-section .wc-column-wrapper .wc-column,
+    .wc-services-section .wc-column-wrapper .wc-column {
+        width: 100%;
+        padding: 0;
+    }
+}

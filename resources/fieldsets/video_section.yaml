@@ -1,0 +1,48 @@
+title: 'Video Section'
+fields:
+  -
+    handle: main_title
+    field:
+      type: text
+      display: 'Main Title'
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Content
+  -
+    handle: video_title
+    field:
+      type: text
+      display: 'Video Title'
+  -
+    handle: video_url
+    field:
+      type: link
+      display: 'Video Url'
+  -
+    handle: play_button_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Play Button Image'
+  -
+    handle: play_button_border
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Play Button Border'
+  -
+    handle: thumbnail
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Thumbnail

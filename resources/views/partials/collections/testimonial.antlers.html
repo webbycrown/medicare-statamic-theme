@@ -1,0 +1,23 @@
+<div class="swiper-slide">
+    <div class="testimonial-content">
+        <div class="img-cover">
+            {{ if avatar}}
+                <img src="{{ avatar:url }}" alt="{{ avatar:alt }}">
+            {{ /if }}
+        </div>
+        <div class="wc-content-detail-group">
+            <p>{{ content }}</p>
+            <h5>{{ title }} - {{ designation }}</h5>
+            <ul class="wc-rating">
+
+                {{ loop from="1" to="{rating}" }}
+
+                <li>
+                    <i class="fa-solid fa-star"></i>
+                </li>
+
+                {{ /loop }}
+            </ul>
+        </div>
+    </div>
+</div>

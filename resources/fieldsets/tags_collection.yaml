@@ -1,0 +1,10 @@
+title: 'Tags Collection'
+fields:
+  -
+    handle: tags
+    field:
+      mode: select
+      collections:
+        - tags
+      type: entries
+      display: Tags

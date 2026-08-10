@@ -1,0 +1,21 @@
+title: 'Team Members Collection'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: specialists
+    field:
+      type: text
+      display: Specialists
+  -
+    handle: doctors
+    field:
+      max_items: 4
+      mode: select
+      collections:
+        - team_members
+      type: entries
+      display: Doctors

@@ -1,0 +1,139 @@
+{{ form:appointment
+    method="POST"
+    action="{{ route:appointment.submit }}"
+    id="appointment-form"
+    attr:novalidate="novalidate"
+}}
+
+    {{ csrf }}
+
+    <!-- Treatment + Doctor -->
+    <div class="form-column">
+
+        {{ fields }}
+
+            {{ if handle == "specialization" }}
+                <div class="form-input">
+                    <select
+                        id="specialization"
+                        name="{{ handle }}"
+                        required="required"
+                    >
+                        <option value="" selected="selected">
+                            Treatment Type
+                        </option>
+
+                        {{ collection:specialtzation }}
+                            <option value="{{ id }}">
+                                {{ title }}
+                            </option>
+                        {{ /collection:specialtzation }}
+                    </select>
+
+                    <small
+                        class="field-error text-danger"
+                        data-error-for="{{ handle }}"
+                    ></small>
+                </div>
+            {{ /if }}
+
+            {{ if handle == "doctor_name" }}
+                <div class="form-input">
+                    <select
+                        id="doctor_name"
+                        name="{{ handle }}"
+                        required="required"
+                    >
+                        <option value="" selected="selected">
+                            Select Doctor
+                        </option>
+
+                        {{ collection:team_members }}
+                            <option value="{{ id }}">
+                                {{ title }}
+                            </option>
+                        {{ /collection:team_members }}
+                    </select>
+
+                    <small
+                        class="field-error text-danger"
+                        data-error-for="{{ handle }}"
+                    ></small>
+                </div>
+            {{ /if }}
+
+        {{ /fields }}
+
+    </div>
+
+
+    <!-- Date + Time -->
+    <div class="time-picker form-column">
+
+        {{ fields }}
+
+            {{ if handle == "enter_date" }}
+                <div class="form-input">
+                    <input
+                        type="date"
+                        id="{{ handle }}"
+                        class="datepicker"
+                        placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                        name="{{ handle }}"
+                    >
+                    <small
+                        class="field-error text-danger"
+                        data-error-for="{{ handle }}"
+                    ></small>
+                </div>
+
+            {{ /if }}
+
+
+            {{ if type == "select" && handle != "specialization" && handle != "doctor_name" }}
+                <div class="form-input">
+                    <select
+                        name="{{ handle }}"
+                        id="{{ handle }}"
+                        class="input-field"
+                    >
+                        <option value="">
+                            {{ display }}
+                        </option>
+
+                        {{ foreach:options as="option|label" }}
+                            <option
+                                value="{{ option }}"
+                                {{ if value == option }}selected{{ /if }}
+                            >
+                                {{ label }}
+                            </option>
+                        {{ /foreach:options }}
+                    </select>
+
+                    <small
+                        class="field-error text-danger"
+                        data-error-for="{{ handle }}"
+                    ></small>
+                </div>
+            {{ /if }}
+
+        {{ /fields }}
+
+    </div>
+
+
+    <div>
+        <input
+            class="btn btn-primary schedule-btn"
+            type="submit"
+            value="{{ form_settings:appointment_button_label }}"
+        >
+    </div>
+
+    <div
+        id="form-success"
+        class="hidden bg-green-100 text-green-700 py-3 mb-4"
+    ></div>
+
+{{ /form:appointment }}

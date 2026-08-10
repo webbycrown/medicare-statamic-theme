@@ -1,0 +1,148 @@
+title: 'All Page Builder'
+fields:
+  -
+    handle: all_sections
+    field:
+      type: replicator
+      display: 'All Sections'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            breadcrumb_section:
+              display: 'Breadcrumb Section'
+              fields:
+                -
+                  import: breadcrumb_section
+            title_and_paragraph:
+              display: 'Title And Paragraph'
+              fields:
+                -
+                  import: title_and_paragraph
+            address:
+              display: Address
+              fields:
+                -
+                  import: address
+            google_map_embed_url:
+              display: 'Google Map Embed URL'
+              fields:
+                -
+                  import: google_map_embed_url
+            about_section:
+              display: 'About Section'
+              fields:
+                -
+                  import: about_section
+            video_section:
+              display: 'Video Section'
+              fields:
+                -
+                  import: video_section
+            team_members_collection:
+              display: 'Team Members Collection'
+              fields:
+                -
+                  import: team_members_collection
+                -
+                  import: button
+            button:
+              display: Button
+              fields:
+                -
+                  import: button
+            social_icons:
+              display: 'Social Icons'
+              fields:
+                -
+                  import: social_icons
+            title_and_paragraphs:
+              display: 'Title And Paragraphs'
+              fields:
+                -
+                  import: title_and_paragraphs
+            title_and_tags:
+              display: 'Title And tags'
+              fields:
+                -
+                  import: title_and_tags
+            title_description_and_image:
+              display: 'Title Description And Image'
+              fields:
+                -
+                  import: title_description_and_image
+            image:
+              display: Image
+              fields:
+                -
+                  import: image
+            image_and_title:
+              display: 'Image And Title'
+              fields:
+                -
+                  import: image_and_title
+            title_and_sub_heading:
+              display: 'Title and Sub Heading'
+              fields:
+                -
+                  import: title_and_sub_heading
+            blog_section:
+              display: 'Blog Section'
+              fields:
+                -
+                  import: blog_section
+            title_and_image:
+              display: 'Title And Image'
+              fields:
+                -
+                  import: title_and_image
+            gallery:
+              display: Gallery
+              fields:
+                -
+                  import: gallery
+            timing:
+              display: Timing
+              fields:
+                -
+                  import: timing
+            specialization_collections:
+              display: 'Specialization Collections'
+              fields:
+                -
+                  import: specialization_collections
+            home_hero_section:
+              display: 'Home Hero Section'
+              fields:
+                -
+                  import: home_hero_section
+            features_section:
+              display: 'Features Section'
+              fields:
+                -
+                  import: features_section
+            service_collection:
+              display: 'Service Collection'
+              fields:
+                -
+                  import: service_collection
+            services_listing_section:
+              display: 'Services listing section'
+              fields:
+                -
+                  import: services_listing_section
+            faq_section:
+              display: 'FAQ Section'
+              fields:
+                -
+                  import: faq_section
+            testimonials_collection:
+              display: 'Testimonials Collection'
+              fields:
+                -
+                  import: testimonials_collection
+            blog_collection:
+              display: 'Blog Collection'
+              fields:
+                -
+                  import: blog_collections

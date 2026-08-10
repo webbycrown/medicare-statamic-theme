@@ -1,0 +1,44 @@
+{{ form:contact_form action="{route:contact_form.submit}" method="POST" id="contact-form" attr:novalidate="novalidate" }}
+    {{ csrf }}
+    {{ fields }}
+        {{ if type == "textarea" }}
+            <textarea type="{{ type }}"
+                placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}" name="{{ handle }}"
+                id="{{ handle }}"></textarea>
+            <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+        {{ else }}
+            {{ if index == 0 }}
+                <div class="form-column">
+                    <div>
+                        <input type="{{ type }}" class="form-control"
+                            placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                            name="{{ handle }}" id="{{ handle }}">
+
+                        <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+                    </div>
+            {{ elseif index == 1 }}
+                <div>
+                    <input type="{{ type }}" class="form-control"
+                        placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                        name="{{ handle }}" id="{{ handle }}">
+
+                    <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+                </div>
+                </div>
+            {{ else }}
+                <input type="{{ type }}" class="form-control"
+                    placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                    name="{{ handle }}" id="{{ handle }}">
+                <small class="field-error text-danger" data-error-for="{{ handle }}"></small>
+            {{ /if }}
+        {{ /if }}
+    {{ /fields }}
+
+
+    <div class="contact-btn">
+        <input class="btn btn-primary" type="submit" value="{{ form_settings:button_label }}">
+    </div>
+
+    <div id="form-success" class="hidden bg-green-100 text-green-700 p-3 mb-4">
+    </div>
+{{ /form:contact_form }}

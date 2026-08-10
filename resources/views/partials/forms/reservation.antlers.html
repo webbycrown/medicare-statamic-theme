@@ -1,0 +1,138 @@
+{{ form:reservation
+    method="POST"
+    action="{{ route:reservation.submit }}"
+    id="reservation-form"
+    attr:novalidate="novalidate"
+}}
+
+    {{ csrf }}
+
+    <div class="reservation-form">
+        <div class="row">
+
+            <!-- LEFT SIDE - 5 FIELDS -->
+            <div class="col-12 col-lg-8">
+                <div class="appointment-area">
+                    <div class="form-wrap">
+                        <div class="form-column">
+
+                            {{ fields }}
+
+                                {{ if handle == "name" }}
+                                    <div class="form-input field-name">
+                                        <input
+                                            type="text"
+                                            id="{{ handle }}"
+                                            name="{{ handle }}"
+                                            placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                                        >
+                                        <small
+                                            class="field-error text-danger"
+                                            data-error-for="{{ handle }}"
+                                        ></small>
+                                    </div>
+                                {{ /if }}
+
+
+                                {{ if handle == "reason_for_appointment" }}
+                                    <div class="form-input field-reason">
+                                        <input
+                                            type="text"
+                                            id="{{ handle }}"
+                                            name="{{ handle }}"
+                                            placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                                        >
+                                        <small
+                                            class="field-error text-danger"
+                                            data-error-for="{{ handle }}"
+                                        ></small>
+                                    </div>
+                                {{ /if }}
+
+
+                                {{ if handle == "reservation_email" }}
+                                    <div class="form-input field-email">
+                                        <input
+                                            type="email"
+                                            id="{{ handle }}"
+                                            name="{{ handle }}"
+                                            placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"
+                                        >
+                                        <small
+                                            class="field-error text-danger"
+                                            data-error-for="{{ handle }}"
+                                        ></small>
+                                    </div>
+                                {{ /if }}
+
+
+                                {{ if handle == "date_field" }}
+                                    <div class="form-input field-date">
+                                        <input
+                                            type="date"
+                                            id="{{ handle }}"
+                                            name="{{ handle }}"
+                                        >
+                                        <small
+                                            class="field-error text-danger"
+                                            data-error-for="{{ handle }}"
+                                        ></small>
+                                    </div>
+                                {{ /if }}
+
+
+                                {{ if handle == "treatment_type" }}
+                                    <div class="form-input field-treatment">
+                                        <select
+                                            id="{{ handle }}"
+                                            name="{{ handle }}"
+                                        >
+                                            <option value="" selected disabled>
+                                                Treatment Type
+                                            </option>
+
+                                            {{ collection:specialtzation }}
+                                                <option value="{{ id }}">
+                                                    {{ title }}
+                                                </option>
+                                            {{ /collection:specialtzation }}
+
+                                        </select>
+
+                                        <small
+                                            class="field-error text-danger"
+                                            data-error-for="{{ handle }}"
+                                        ></small>
+                                    </div>
+                                {{ /if }}
+
+                            {{ /fields }}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- RIGHT SIDE - TITLE + BUTTON -->
+            <div class="col-12 col-lg-4">
+                <div class="reservation-title">
+
+                    <h2>
+                        {{ form_settings:reservation_title }}
+                    </h2>
+
+                    <input
+                        class="btn btn-primary"
+                        type="submit"
+                        value="{{ form_settings:reservation_button_label }}"
+                    >
+
+                </div>
+            </div>
+
+        </div>
+      <div id="form-success" class="hidden bg-green-100 text-green-700 p-3 mb-4"></div>
+    </div>
+
+{{ /form:reservation }}

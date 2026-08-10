@@ -1,0 +1,43 @@
+title: 'About Section'
+fields:
+  -
+    handle: main_title
+    field:
+      type: text
+      display: 'Main Title'
+  -
+    handle: sub_title
+    field:
+      type: text
+      display: 'Sub Title'
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Content
+  -
+    handle: features
+    field:
+      type: grid
+      display: Features
+      replicator_preview: false
+      fields:
+        -
+          handle: feature
+          field:
+            type: text
+            display: Feature
+        -
+          handle: url
+          field:
+            type: link
+            display: Url
+  -
+    handle: featured_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Featured Image'
+  -
+    import: button

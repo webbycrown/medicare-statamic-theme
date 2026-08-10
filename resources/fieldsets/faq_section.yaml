@@ -1,0 +1,21 @@
+title: 'FAQ Section'
+fields:
+  -
+    import: title_and_sub_heading
+  -
+    handle: featured_image
+    field: about_section.featured_image
+  -
+    handle: qa
+    field:
+      type: replicator
+      display: QA
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  import: title_and_paragraph

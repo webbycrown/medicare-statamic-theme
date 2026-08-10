@@ -1,0 +1,24 @@
+title: 'Title And Tags'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: tags
+    field:
+      type: replicator
+      display: Tags
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: tag
+                  field:
+                    type: text
+                    display: Tag

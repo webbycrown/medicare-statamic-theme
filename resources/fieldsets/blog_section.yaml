@@ -1,0 +1,28 @@
+title: 'Blog Section'
+fields:
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Content
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: date
+    field:
+      time_enabled: true
+      earliest_date: '2026-08-05'
+      type: date
+      display: Date
+  -
+    handle: comments
+    field:
+      type: text
+      display: Comments
+  -
+    import: button

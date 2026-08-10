@@ -1,0 +1,15 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: newsletter_email
+            field:
+              placeholder: 'Your Email'
+              type: text
+              display: Email
+              validate:
+                - required
+                - email

@@ -1,0 +1,13 @@
+title: 'Services listing section'
+fields:
+  -
+    handle: heading
+    field: home_hero_section.heading
+  -
+    handle: paragraph
+    field: home_hero_section.paragraph
+  -
+    handle: featured_image
+    field: about_section.featured_image
+  -
+    import: title_description_and_image

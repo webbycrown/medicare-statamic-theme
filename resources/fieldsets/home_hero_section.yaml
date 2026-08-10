@@ -1,0 +1,25 @@
+title: 'Home Hero Section'
+fields:
+  -
+    handle: main_title
+    field: about_section.main_title
+  -
+    handle: heading
+    field: timing.heading
+  -
+    handle: add_button
+    field: button.add_button
+  -
+    handle: rating
+    field:
+      type: text
+      display: Rating
+      validate:
+        - 'max:5'
+        - numeric
+  -
+    handle: paragraph
+    field: title_and_paragraph.paragraph
+  -
+    handle: image
+    field: gallery.image

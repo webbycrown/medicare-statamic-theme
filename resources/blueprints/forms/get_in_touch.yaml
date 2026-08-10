@@ -1,0 +1,40 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              placeholder: Name
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              placeholder: Email
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+          -
+            handle: mobile_number
+            field:
+              type: text
+              display: 'Mobile number'
+              validate:
+                - required
+                - numeric
+              placeholder: 'Mobile number'
+          -
+            handle: additional_information
+            field:
+              placeholder: 'Additional Information'
+              type: textarea
+              display: 'Additional Information'
+              validate:
+                - required

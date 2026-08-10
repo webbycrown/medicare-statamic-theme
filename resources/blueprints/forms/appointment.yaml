@@ -1,0 +1,85 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: specialization
+            field:
+              placeholder: Specialization
+              type: text
+              display: Specialization
+              validate:
+                - required
+          -
+            handle: doctor_name
+            field:
+              type: text
+              display: 'Doctor Name'
+              validate:
+                - required
+          -
+            handle: enter_date
+            field:
+              placeholder: Date
+              type: text
+              display: 'Enter Date'
+              validate:
+                - required
+          -
+            handle: start_time
+            field:
+              options:
+                -
+                  key: 12_am
+                  value: '12:00 am'
+                -
+                  key: 1_am
+                  value: '1:00 am'
+                -
+                  key: 2_am
+                  value: '2:00 am'
+                -
+                  key: 3_am
+                  value: '3:00 am'
+                -
+                  key: 4_am
+                  value: '4:00 am'
+                -
+                  key: 5_am
+                  value: '5:00 am'
+              placeholder: 'Start Time'
+              default: 'Start Time'
+              type: select
+              display: 'Start Time'
+              validate:
+                - required
+          -
+            handle: end_time
+            field:
+              options:
+                -
+                  key: 12_am
+                  value: '12:00 am'
+                -
+                  key: 1_am
+                  value: '1:00 am'
+                -
+                  key: 2_am
+                  value: '2:00 am'
+                -
+                  key: 3_am
+                  value: '3:00 am'
+                -
+                  key: 4_am
+                  value: '4:00 am'
+                -
+                  key: 5_am
+                  value: '5:00 am'
+              placeholder: 'End Time'
+              default: 'End Time'
+              type: select
+              display: 'End Time'
+              validate:
+                - required

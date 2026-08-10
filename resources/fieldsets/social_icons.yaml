@@ -1,0 +1,48 @@
+title: 'Social Icons'
+fields:
+  -
+    handle: social_icon
+    field:
+      type: grid
+      display: 'Social Icon'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: icon
+          field:
+            options:
+              -
+                key: fab fa-pinterest-p
+                value: Pintrest
+              -
+                key: fab fa-twitter
+                value: Twitter
+              -
+                key: fab fa-instagram
+                value: Instagram
+              -
+                key: fab fa-linkedin-in
+                value: LinkedIn
+              -
+                key: fab fa-facebook-f
+                value: Fcaebook
+              -
+                key: fab fa-youtube
+                value: Youtube
+              -
+                key: fas fa-envelope
+                value: Email
+              -
+                key: fab fa-artstation
+                value: Artstation
+            type: select
+            display: icon
+        -
+          handle: url
+          field:
+            type: text
+            display: Url

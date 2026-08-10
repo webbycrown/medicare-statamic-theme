@@ -1,0 +1,50 @@
+title: Testimonial
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: Name
+          -
+            handle: avatar
+            field:
+              container: assets
+              type: assets
+              display: Avatar
+              max_files: 1
+          -
+            handle: content
+            field:
+              type: textarea
+              display: Content
+          -
+            handle: designation
+            field:
+              type: text
+              display: Designation
+          -
+            handle: rating
+            field:
+              type: integer
+              display: Rating
+              validate:
+                - 'max:5'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

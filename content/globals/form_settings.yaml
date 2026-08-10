@@ -1,0 +1,14 @@
+title: 'Form Settings'
+data:
+  title: 'reach us'
+  heading: 'Contact Form'
+  description: 'Have questions about our services, appointments, or treatment options? Our dedicated team is here to provide the information and support you need. Fill out the contact form and we will get back to you as soon as possible.'
+  button_label: Submit
+  get_in_touch_title: Details
+  heading_duplicate: 'Get in touch'
+  get_in_touch_button_label: Submit
+  appointment_title: 'Make An Appointment'
+  appointment_button_label: 'send request'
+  reservation_title: 'Make an Appointment to Fit Your Needs'
+  reservation_button_label: Appointment
+  comment_button_label: 'Post Comment'

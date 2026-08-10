@@ -1,0 +1,10 @@
+title: 'Error Page Settings'
+data:
+  error_code: '404'
+  short_message: 'Page Not Found'
+  descriptive_message: "Oops! It looks like you've wandered off the beaten path. The page you're looking for doesn't exist or has moved."
+  add_button:
+    -
+      id: msh1oznr
+      label: 'Back To Home'
+      url: /

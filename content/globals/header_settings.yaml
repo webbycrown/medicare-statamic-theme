@@ -1,0 +1,43 @@
+title: 'Header Settings'
+data:
+  header_messages:
+    -
+      id: mshd4o9h
+      add_button:
+        -
+          id: mshd4yj3
+          label: info@webbycrown.com
+          url: 'mailto:info@webbycrown.com'
+      type: link
+      enabled: true
+    -
+      id: mshd4m79
+      message: 'No: 99 A, East Florida Street, Alabama, USA 3661'
+      type: new_set
+      enabled: true
+  social_icon:
+    -
+      id: mshdyhgm
+      title: Facebook
+      icon: 'fab fa-facebook-f'
+      url: 'https://www.facebook.com'
+    -
+      id: mshdyi8r
+      title: Twitter
+      icon: 'fab fa-twitter'
+      url: 'https://www.twitter.com'
+    -
+      id: mshdyvhm
+      title: Pintrest
+      icon: 'fab fa-pinterest-p'
+      url: 'https://www.pintrest.com'
+    -
+      id: mshdz0kz
+      title: LinkedIn
+      icon: 'fab fa-linkedin-in'
+      url: 'https://www.linkedin.com'
+  add_button:
+    -
+      id: mshedj7k
+      label: Appointments
+      url: /appointment

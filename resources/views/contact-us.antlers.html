@@ -1,0 +1,82 @@
+{{ all_sections where="type:breadcrumb_section" }}
+    <!-- ======= start Breadcrumb ======= -->
+    {{ partial:partials/sections/breadcrumb_section }}
+    <!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+
+<!-- ======= start Contact section ======= -->
+<section class="wc-contact-section section-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-wrapper">
+                    <div class="contact-section__wrapper">
+                        <div class="appointment-content">
+                            {{ all_sections where="type:title_and_paragraph" }}
+                            <div class="wc-content-item">
+                                <a href="{{ link }}"><i
+                                        class="fa-regular fa-calendar-check"></i></a>
+                                <div class="appointment-title">
+                                    <h2>{{ title }}</h2>
+                                    <p>{{ paragraph }}</p>
+                                </div>
+                            </div>
+                            {{ /all_sections }}
+
+                        </div>
+                        <div class="contact-area">
+                            {{ all_sections where="type:address" }}
+                            {{ add_address }}
+                            <div class="contact-info">
+                                <h2>{{ title }}</h2>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-phone"></i>
+                                        <p><a
+                                                href="tel:{{ original_number }}">{{
+                                                contact_number }}</a></p>
+                                    </li>
+                                    <li>
+                                        <i
+                                            class="fa-regular fa-paper-plane"></i>
+                                        <p><a href="mailto:{{ email }}"
+                                                class="mail-link">{{ email
+                                                }}</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <p>{{ address }}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            {{ /add_address }}
+                            {{ /all_sections }}
+                        </div>
+                    </div>
+                    <div class="contact-section__content">
+                        <div class="heading-secondary">
+                            <h3 class="sub-title">{{ form_settings:title }}</h3>
+                            <h2>{{ form_settings:heading }}</h2>
+                            <p>{{ form_settings:description }}</p>
+                        </div>
+
+                        {{# contact form #}}
+                        {{ partial:partials/forms/contact_form }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="contact-map">
+    {{ all_sections where="type:google_map_embed_url" }}
+    <iframe src="{{ map_embed_url }}" style="border:0;width:100%; height:100%"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+    {{ /all_sections }}
+</div>
+
+<!-- ======= End Contact section ======= -->

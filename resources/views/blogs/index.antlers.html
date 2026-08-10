@@ -1,0 +1,38 @@
+{{ all_sections where="type:breadcrumb_section" }}
+<!-- ======= start Breadcrumb ======= -->
+{{ partial:partials/sections/breadcrumb_section }}
+<!-- ======= End Breadcrumb ======= -->
+{{ /all_sections }}
+
+<!-- ======= start blog section ======= -->
+<section class="wc-blog-section section-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ collection:blogs
+                paginate="{{ theme_settings:initial_items }}" as="posts"
+                tags:contains="{get:tag}" }}
+                <div class="wc-column-wrapper load-more-wrapper blog_search">
+                    {{ posts }}
+                        {{ partial:partials/collections/blogs }}
+                    {{ /posts }}
+                </div>
+                {{ paginate }}
+                {{ if next_page }}
+                <div class="text-center mt-5">
+                    <button
+                        class="btn btn-primary load-more-btn"
+                        data-next-page="{{ next_page }}">
+                        {{ theme_settings:initial_items_label }}
+                    </button>
+                </div>
+                {{ /if }}
+                {{ /paginate }}
+                {{ /collection:blogs }}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End blog section ======= -->
+
+

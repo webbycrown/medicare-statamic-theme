@@ -1,0 +1,12 @@
+title: 'Title and Sub Heading'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: sub_heading
+    field:
+      type: text
+      display: 'Sub Heading'

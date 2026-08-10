@@ -1,0 +1,7 @@
+title: Services
+template: services/show
+revisions: false
+route: 'service/{slug}'
+date_behavior:
+  past: public
+  future: private
